@@ -1,0 +1,1 @@
+<h1 class="title main-title base-indent"><? the_title() ?></h1>

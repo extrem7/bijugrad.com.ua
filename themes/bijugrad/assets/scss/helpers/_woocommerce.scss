@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'WooCommerce';
+  src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot');
+  src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff') format('woff'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf') format('truetype'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+.blockOverlay {
+  &:before {
+    height: 1em;
+    width: 1em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -.5em;
+    margin-top: -.5em;
+    content: '';
+    -webkit-animation: spin 1s ease-in-out infinite;
+    animation: spin 1s ease-in-out infinite;
+    background: url('../../../../plugins/woocommerce/assets/images/icons/loader.svg') center center;
+    background-size: cover;
+    line-height: 1;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(0, 0, 0, .75);
+  }
+}
+
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+  padding: 1em 2em 1em 3.5em;
+  margin: 0 0 2em;
+  position: relative;
+  background-color: #f7f6f7;
+  color: #515151;
+  border-top: 3px solid red;
+  list-style: none outside;
+  clear: both;
+  width: auto;
+  word-wrap: break-word;
+
+  &::before {
+    font-family: 'WooCommerce';
+    content: '\e028';
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+  }
+
+  .button {
+    float: right;
+  }
+
+  li {
+    list-style: none outside !important; // Required for default theme compatibility
+    padding-left: 0 !important; // Required for default theme compatibility
+    margin-left: 0 !important; // Required for default theme compatibility
+  }
+}
+
+.woocommerce-message {
+  border-top-color: red;
+
+  &::before {
+    content: '\e015';
+    color: $red;
+  }
+}
+
+.woocommerce-info {
+  border-top-color: $red;
+
+  &::before {
+    color: $red;
+  }
+}
+
+.woocommerce-error {
+  border-top-color: $red;
+
+  &::before {
+    content: '\e016';
+    color: $red;
+  }
+}
+
+@media (max-width: 768px) {
+  .woocommerce-message,
+  .woocommerce-error,
+  .woocommerce-info {
+    display: flex;
+    flex-direction: column-reverse;
+    a {
+      margin-top: 15px;
+    }
+  }
+
+}
+
+.woocommerce-password-strength {
+  text-align: center;
+  font-weight: 600;
+  padding: 3px 0.5em;
+  font-size: 0.8em;
+
+  &.strong {
+    background-color: red;
+    border-color: red;
+  }
+
+  &.short {
+    background-color: #f1adad;
+    border-color: #e35b5b;
+  }
+
+  &.bad {
+    background-color: #fbc5a9;
+    border-color: #f78b53;
+  }
+
+  &.good {
+    background-color: #ffe399;
+    border-color: #ffc733;
+  }
+}
+
+.woocommerce-remove-coupon {
+  color: $red;
+  font-size: rem(12px);
+  &:hover {
+    color: $red;
+  }
+}
+
+.woocommerce-password-hint woocommerce-remove-coupon{
+  margin: 0.5em 0 0;
+  display: block;
+  font-size: 68%;
+}
+
+.tinvwl-shortcode-add-to-cart {
+  display: inline-block;
+  position: relative;
+    .tinvwl_add_to_wishlist_button {
+      &:before {
+        content: '\f004' !important;
+        font-family: 'Font Awesome 5 Free' !important;
+        font-weight: 400 !important;
+        font-size: rem(17px);
+        color: #0e0e0e;
+      }
+      &.tinvwl-product-in-list {
+        &:before {
+          font-weight: 900 !important;
+          color: $red;
+        }
+      }
+      &:hover {
+        &:before {
+          color: $red;
+        }
+      }
+  }
+}
+
+.single-product {
+  .gallery-wrapper {
+    .tinvwl-shortcode-add-to-cart {
+      .tinvwl_add_to_wishlist_button {
+        &:before {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.tinv-wishlist .product-remove button {
+  padding-left: 0!important;
+}
+
+.aws-container {
+  width: 100%;
+  .aws-wrapper {
+    display: flex;
+    .aws-search-field {
+
+    }
+  }
+  .aws-loader {
+    right: 130px !important;
+  }
+  .aws-search-clear {
+    display: none;
+  }
+}
+
+.stars {
+  a {
+    font-size: 0;
+
+    &:hover ~ a::before {
+      font-weight: 300;
+    }
+  }
+
+  &:hover a::before {
+    font-weight: 700;
+  }
+
+  &.selected {
+    a.active {
+      &::before {
+        font-weight: 700;
+      }
+
+      ~ a::before {
+        font-weight: 300;
+      }
+    }
+
+    a:not( .active )::before {
+      font-weight: 700;
+    }
+  }
+}
+
+.add-to-cart {
+  position: relative;
+  &.loading {
+    opacity: 0.25;
+    &::after {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      line-height: 1;
+      vertical-align: -.125em;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      line-height: inherit;
+      vertical-align: baseline;
+      content: "\f110";
+      -webkit-animation: fa-spin .75s linear infinite;
+      animation: fa-spin .75s linear infinite;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+  }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+div.wpcf7 .ajax-loader {
+  display: none!important;
+}
+
+.youtube .play-button {
+  width: 90px;
+  height: 60px;
+  background-color: #333;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+
+.youtube .play-button:before {
+  content: "";
+  border-style: solid;
+  border-width: 15px 0 15px 26.0px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.youtube .play-button {
+  cursor: pointer;
+}
+
+.youtube .play-button,
+.youtube .play-button:before {
+  position: absolute;
+}
+
+.youtube .play-button,
+.youtube .play-button:before {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+#sbi_images {
+  display: flex;
+
+  .sbi_photo {
+    height: 186px !important;
+  }
+}
+
+.form-row {
+  margin-left: 0;
+  margin-right: 0;
+
+  span {
+    width: 100%;
+    display: block;
+  }
+}

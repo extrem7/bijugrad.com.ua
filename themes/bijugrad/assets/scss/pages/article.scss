@@ -1,0 +1,38 @@
+.article-date {
+  margin: 0.5rem 0;
+  color: #999999;
+}
+
+.articles {
+  .article-item {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #c7c7c7;
+    padding: rem(10px) 0;
+    &:last-child {
+      border-bottom: 1px solid #c7c7c7;
+    }
+  }
+  .article-description {
+    margin-left: rem(15px);
+  }
+  img {
+    min-width: 175px;
+    width: 175px;
+  }
+}
+
+@media (max-width: 576px) {
+  .articles {
+    .article-item {
+      flex-direction: column;
+    }
+    .article-description {
+      margin-left: 0;
+    }
+    img {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

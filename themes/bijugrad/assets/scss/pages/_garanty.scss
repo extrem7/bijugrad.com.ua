@@ -1,0 +1,30 @@
+.guarantee-item {
+  text-align: center;
+  .title {
+    margin: 0.2rem 0;
+  }
+  margin-bottom: 1.3rem;
+}
+.page-template-guarantee {
+  main {
+    i {
+      color: $red;
+      font-size: rem(30px);
+    }
+  }
+  .box-info {
+    padding: rem(25px);
+    input {
+      max-width: 250px;
+    }
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div {
+      margin-bottom: 1rem;
+      width: 33%;
+    }
+  }
+}

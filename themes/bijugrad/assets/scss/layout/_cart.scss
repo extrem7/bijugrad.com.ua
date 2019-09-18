@@ -1,0 +1,149 @@
+.actions {
+    margin-top: rem(22px);
+}
+
+.shop_table {
+    width: 100%;
+    color: #000000;
+
+    tr {
+      border-top: 1px solid #eeeff4;
+      &:last-child {
+        border-bottom: 1px solid #eeeff4;
+      }
+      td {
+        padding: rem(12px);
+      }
+    }
+
+    .woocommerce-Price-amount {
+      font-size: rem(20px);
+    }
+
+    .product-remove {
+      a.remove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        background-color: #eeeff4;
+        border-radius: 50%;
+        &:hover {
+          background-color: $pink;
+        }
+      }
+    }
+
+    .product-thumbnail {
+      width: 22%;
+    }
+
+    .quantity {
+      input {
+        border: 2px solid #f2f2f2;
+        font-size: 0.875rem;
+      }
+      button {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .product-name {
+      font-size: rem(13px);
+      a {
+        font-size: rem(13px);
+        color: #000000;
+      }
+      .woocommerce-Price-amount {
+        margin: 1rem 0;
+      }
+    }
+
+    .attributes {
+      font-size: 12px;
+      color: #7d7d7d;
+      span {
+        color: #000;
+      }
+    }
+
+    .photo {
+      width: 145px;
+      height: 145px;
+      background: no-repeat center;
+      background-size: contain;
+    }
+  }
+
+.subtotal {
+  background-color: #f2f2f2;
+  padding: rem(15px);
+  .sub-total {
+    width: 100%;
+    font-size: rem(13px);
+    color: #000000;
+    .woocommerce-Price-amount {
+      font-size: rem(24px);
+      color: #000000;
+    }
+    td {
+      padding: rem(6px) rem(5px);
+    }
+    tr:last-child {
+      border-top: 1px solid #fff;
+      td {
+        padding-top: rem(8px);
+      }
+    }
+  }
+}
+
+.checkout {
+  margin-top: rem(40px);
+  textarea {
+    height: 86px!important;
+  }
+  .title {
+    padding-top: rem(16px);
+  }
+  .coupon {
+    font-size: rem(13px);
+    margin-bottom: rem(13px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .subtotal {
+    margin-top: 2rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .actions {
+    text-align: center;
+  }
+  .quantity {
+    margin: rem(15px) 0;
+  }
+  .shop_table {
+    .photo {
+      margin: 0 auto;
+    }
+    .product-thumbnail {
+      width: 100%;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0;
+      td {
+        padding: 0.2rem 0.6875rem;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,60 @@
+.payment-item {
+  text-align: center;
+   i {
+     color: $red;
+     font-size: rem(34px);
+   }
+  .title {
+    margin: 0.2rem 0;
+  }
+  margin-bottom: 1rem;
+}
+
+.page-template-payment {
+  table {
+    tr {
+      th:first-child {
+        width: 20%;
+      }
+      th:nth-child(3) {
+        width: 10%;
+      }
+    }
+    tr {
+      th,
+      td {
+        padding: rem(8px);
+        border: 1px solid #c7c7c7;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-template-payment {
+    table {
+      tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:first-child {
+          display: none;
+        }
+        td {
+          text-align: center;
+          border-bottom: 0;
+          &:first-child {
+            font-weight: 700;
+          }
+        }
+        &:last-child {
+          td {
+            &:last-child {
+              border-bottom: 1px solid #c7c7c7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

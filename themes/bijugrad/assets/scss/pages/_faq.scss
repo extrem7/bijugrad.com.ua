@@ -1,0 +1,29 @@
+.faq-list {
+  color: #1a2940;
+  > div {
+    margin-bottom: rem(30px);
+  }
+  .faq-answer {
+    margin-top: rem(20px);
+  }
+  .faq-item {
+    background-color: #f2f2f2;
+    padding: rem(35px) rem(15px);
+    font-style: italic;
+    transition: box-shadow .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+    i {
+      font-size: rem(18px);
+    }
+    &:hover {
+      box-shadow: 0 0 7px rgba(88, 88, 88, 0.38);
+      color: #fff;
+      background-color: $pink;
+    }
+  }
+}
+
+.address {
+  .link {
+    color: #60b6c4;
+  }
+}

@@ -1,0 +1,296 @@
+.owl-theme .owl-dots .owl-dot span {
+  border-radius: 0;
+  background-color: #fff;
+  margin: 5px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #000;
+}
+#banner .owl-nav.disabled+.owl-dots {
+  position: absolute;
+  bottom: 10%;
+  right: 38%;
+}
+.owl-carousel-tab .owl-dots .owl-dot span {
+  background-color: $pink;
+}
+
+.title {
+  color: #000;
+  font-weight: 400;
+}
+
+.base-title {
+  font-size: 1rem;
+}
+
+.medium-title {
+  font-size: rem(20px);
+}
+
+.main-title {
+  font-size: rem(32px);
+}
+
+.large-title {
+  font-size: rem(42px);
+}
+
+.secondary-title {
+  font-size: rem(18px);
+}
+
+.small-size {
+  font-size: 0.875rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.dynamic-content {
+  h2,h3,h4,h5 {
+    margin: rem(10px) 0;
+    font-size: rem(20px);
+    color: #000000;
+    text-transform: uppercase;
+  }
+  .alignleft {
+    display: block;
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+  }
+  a:not(.button) {
+    color: $red;
+    text-decoration: underline;
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .alignright {
+    display: block;
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+  }
+  .aligncenter {
+    display: block;
+    margin: 1rem auto;
+  }
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin: rem(30px) auto;
+  .woocommerce-breadcrumb {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000000;
+    img {
+      margin-right: 1rem;
+      margin-top: -5px;
+    }
+    .breadcrumb-separator {
+      color: #a9abb0;
+      margin: 0 2px;
+    }
+    a {
+      color: #a9abb0;
+      &:hover {
+        color: $green
+      }
+    }
+  }
+}
+
+.pagination-box {
+  background-color: #f2f2f2;
+  font-size: rem(13px);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0.6rem rem(20px);
+}
+
+.pagination,
+.woocommerce-pagination {
+  display: flex;
+  justify-content: center;
+  .nav-links,
+  ul {
+    display: flex;
+    padding: 0;
+    span,
+    a {
+      color: #000000;
+      font-size: rem(13px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    .current {
+      background-color: #000;
+      color: #fff;
+    }
+    .next, .prev {
+      width: auto;
+      height: auto;
+      &:hover {
+        background-color: transparent;
+        color: $pink;
+        path {
+          fill: $pink;
+        }
+      }
+    }
+    .next {
+      margin-left: 1rem;
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+    .prev {
+      margin-right: 1rem;
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+
+.link {
+  color: #000;
+  text-decoration: underline;
+  &:hover {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.transform-hover-img {
+  transition: all .2s ease-in-out;
+}
+
+.modal-content {
+  border-radius: 0;
+  background-color: #ececec;
+  .modal-header {
+    padding: 5px 15px;
+    border: 0;
+  }
+  .modal-body {
+    padding: 0 15px 15px 15px;
+  }
+}
+
+.base-indent {
+  margin-bottom: rem(30px);
+}
+
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: rem(28px);
+  }
+}
+
+@media (max-width: 992px) {
+
+  .base-indent {
+    margin-bottom: 1rem;
+  }
+
+  .dynamic-content {
+    .alignleft,
+    .alignright {
+      display: block;
+      margin: 1rem auto;
+      float: none;
+    }
+  }
+
+  .main-title {
+    font-size: rem(24px);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .main-title {
+    font-size: rem(18px);
+  }
+
+  .medium-title {
+    font-size: 1rem;
+  }
+
+  .breadcrumbs {
+    .woocommerce-breadcrumb {
+      white-space: nowrap;
+      overflow-x: scroll !important;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .dynamic-content {
+    h2,h3,h4,h5 {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .pagination-box {
+    flex-direction: column;
+    .pagination, .woocommerce-pagination {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .pagination .nav-links,
+  .pagination ul,
+   .woocommerce-pagination .nav-links,
+   .woocommerce-pagination ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    .page-numbers.prev,
+    .page-numbers.next {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+}
+
+
+
